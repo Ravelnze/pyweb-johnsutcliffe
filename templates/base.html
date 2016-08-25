@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - John Sutcliffe</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container-fluid page-header">
+        <div class="row">
+            <div class="col-md-12">
+                <H1 class="text-center">
+                    <a class="tangerine-header" href="{% url 'basic_page:basic_page' %}">John Sutcliffe</a>
+                </H1>
+                <H4 class="text-center">Wedding DJ & Guitarist</H4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

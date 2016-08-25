@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e328ccab-7413-41e9-8eb3-cb7463c67216" name="johnsutcliffe" url="http://52.62.178.91/">
+        <fileTransfer host="52.62.178.91" port="22" rootFolder="/home/asutcliffe/pyweb/johnsutcliffe/" accessType="SFTP" password="dfc4dfcfdfdcdfcbdff8dfcedfdcdf9ddf93" username="asutcliffe">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

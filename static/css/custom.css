@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Tangerine;
+    src: url('../fonts/Tangerine_Bold.ttf');
+}
+
+.tangerine-header {
+    font-family: Tangerine;
+    font-size: 73px;
+}
+
+.page-header {
+    border: none !important;
+}
+
+.page-header a {
+    text-decoration: none;
+}
