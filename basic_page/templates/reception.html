@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Reception{% endblock %}
+{% block page_name %}Your Reception{% endblock %}
+{% block content_after %}
+    <div class="row">
+        <div class="col-xs-offset-1 col-sm-offset-2">
+            <div class="col-xs-11 col-sm-8 col-lg-9">
+                <p>
+                    From the venue to the table centre pieces, your wedding reception is unique to you.
+                    The music at your reception should also be exactly as you desire which John delivers
+                    with his comprehensive service. John organises everything you require, including your
+                    first dance song, music during the wedding games, the last song of the night, and even
+                    the exact music you want playing as you cut your wedding cake.
+                </p>
+                <p>Your reception with John includes:</p>
+                <ul>
+                    <li>Complete music package covering the duration of your reception</li>
+                    <li>Live guitar performed throughout dinner</li>
+                    <li>High quality sound system</li>
+                    <li>LED effects lighting</li>
+                    <li>Wireless microphone for speeches</li>
+                    <li>Music selection planning meeting</li>
+                    <li>Facilitation of wedding games</li>
+                    <li>Music requests from your guests on the night</li>
+                </ul>
+                <p>
+                    Whether it be snippets of songs for each speech or separate songs for each member of
+                    your bridal party as they enter, John plans out your entire reception from beginning
+                    to end. With John also playing music as requested by your guests you can rest assured
+                    that your reception will be a party that reflects the personalities of yourselves along
+                    with your family and friends.
+                </p>
+            </div>
+            <div class="col-sm-4 col-lg-2 hidden-xs">
+                <img class="media-object img-responsive img-circle"
+                     src="{% static 'img/Reception.jpg' %}"/>
+            </div>
+        </div>
+    </div>
+{% endblock %}

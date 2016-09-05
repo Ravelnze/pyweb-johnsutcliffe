@@ -5,13 +5,119 @@
 
 .tangerine-header {
     font-family: Tangerine;
-    font-size: 73px;
+    font-size: 200%;
+    color: black;
 }
 
 .page-header {
     border: none !important;
+    background-color: #fff3e5;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.page-header a {
+.page-header H1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.page-header H1 a {
     text-decoration: none;
 }
+
+.page-header H1 a:hover {
+    color: #adadad;
+}
+
+.page-header H4 {
+    text-align: center;
+    color: #adadad;
+    font-size: 2.2rem;
+}
+
+.navbar-default {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #fff3e5;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/*
+.navbar-brand {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+*/
+
+/* Prevent navbar from collapsing *//*
+.navbar-collapse.collapse {
+    display: block!important;
+    border: none;
+    text-align: center;
+}*/
+/*
+.navbar-nav>li, .navbar-nav {
+    float: left !important;
+}*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 140px;
+    background-color: #f8f8f8;
+}
+.footer {
+    position: absolute;
+    padding-top: 25px;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 140px;
+    color: #767676;
+    background-color: black;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #b2b2b2;
+}
+
+.black-bg {
+    background-color: black;
+}
+
+.cream-border {
+    border-left: 7px solid #fff3e5;
+}
+
+.remove-padding {
+    padding-left: 0;
+}
+
+.lower-pad {
+    padding-bottom: 20px;
+}
+/*
+.left-pad {
+    padding-left: 25%;
+}*/

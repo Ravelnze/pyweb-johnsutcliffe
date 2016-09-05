@@ -3,5 +3,6 @@ import views
 
 
 urlpatterns = [
-    url(r'^$', views.load_page, name='basic_page'),
+    url(r'^$', views.load_home, name='home'),
+    url(r'^reception/', views.load_reception, name='reception')
 ]

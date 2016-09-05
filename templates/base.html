@@ -1,23 +1,63 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %} - John Sutcliffe</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div class="container-fluid page-header">
-        <div class="row">
-            <div class="col-md-12">
-                <H1 class="text-center">
-                    <a class="tangerine-header" href="{% url 'basic_page:basic_page' %}">John Sutcliffe</a>
-                </H1>
-                <H4 class="text-center">Wedding DJ & Guitarist</H4>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} - John Sutcliffe</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container-fluid page-header">
+            <H1><a class="tangerine-header" href="{% url 'basic_page:home' %}">John Sutcliffe</a></H1>
+            <H4 class="tagline-colour">Wedding DJ & Guitarist</H4>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'basic_page:home' %}">Home</a></li>
+                        <li><a href="{% url 'basic_page:reception' %}">Reception</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Enquiries</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block header-below %}{% endblock %}
+        <div class="container-fluid">
+            {% block content_before %}{% endblock %}
+            <div class="row">
+                <div class="col-sm-offset-1">
+                    <div class="col-sm-9">
+                        <blockquote class="cream-border">
+                            <H3>{% block page_name %}{% endblock %}</H3>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-sm-offset-2"></div>
+            </div>
+            {% block content_after %}{% endblock %}
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="footer">
+                    <p>Phone: 0410 925 297</p>
+                    <p>Email: <a href="mailto:info@johnsutcliffe.com.au">Click Here</a></p>
+                    <p>Copyright © 2016 <a href="http://pyweb.com.au">PyWeb</a>. All rights reserved.</p>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/node_modules/jquery.js' %}"></script>
+    </body>
 </html>
