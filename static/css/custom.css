@@ -35,41 +35,42 @@
     font-size: 2.2rem;
 }
 
-.navbar-default {
+.nav-justified {
     border: none;
     margin-top: 0;
     margin-bottom: 0;
     background-color: #fff3e5;
 }
 
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
+.nav-justified li a {
+    text-decoration: none;
+    color: black;
 }
 
-.navbar .navbar-collapse {
-    text-align: center;
+.nav-justified li a:hover {
+    background-color: #fff3e5;
+    color: #adadad;
 }
 
-/*
-.navbar-brand {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
+.nav-justified li a:active {
+    background-color: #fff3e5;
+    color: black;
 }
-*/
 
-/* Prevent navbar from collapsing *//*
-.navbar-collapse.collapse {
-    display: block!important;
-    border: none;
-    text-align: center;
-}*/
-/*
-.navbar-nav>li, .navbar-nav {
-    float: left !important;
-}*/
+@media (min-width: 768px) {
+    .nav-justified li a {
+        font-size: medium;
+    }
+}
+@media (min-width: 1px) {
+  .nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
 
 html {
     position: relative;
@@ -79,7 +80,49 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 140px;
     background-color: #f8f8f8;
+
+    /* testing background image stuff */
+    /*background: black url('../img/Reception.jpg') no-repeat center;
+    /*background-repeat: no-repeat;
+    background-size: 80%;*/
 }
+/*
+.bg-img {
+    position: relative;
+    background: black;
+    overflow: hidden;
+}
+.bg-img::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('../img/Reception.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.bg-img {
+    background-image: url('../img/Reception.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -khtml-opacity:.50;
+    -moz-opacity:.50;
+    -ms-filter:alpha(opacity=50);
+    filter: alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+    opacity:.50;
+}*/
 .footer {
     position: absolute;
     padding-top: 25px;
@@ -117,7 +160,3 @@ body {
 .lower-pad {
     padding-bottom: 20px;
 }
-/*
-.left-pad {
-    padding-left: 25%;
-}*/
