@@ -3,11 +3,15 @@ from models import SiteContent
 
 
 def load_home(request):
-    context = {'content': SiteContent.objects.filter(page_name='')}
+    query_set = SiteContent.objects.filter(page_name='').order_by('title')
+    context = {'content': query_set}
+
     return render(request, 'home.html', context)
 
 
 def load_reception(request):
-    context = {'content': SiteContent.objects.filter(page_name='reception')}
+    query_set = SiteContent.objects.filter(page_name='reception').order_by('title')
+    context = {'content': query_set}
+
     return render(request, 'reception.html', context)
 
