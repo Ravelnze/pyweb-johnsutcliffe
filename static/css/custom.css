@@ -124,3 +124,19 @@ body {
 .lower-pad {
     padding-bottom: 20px;
 }
+
+.non-justified {
+    text-align: left !important;
+}
+
+.md-text {
+    font-size: medium;
+}
+
+.lg-text {
+    font-size: large;
+}
+
+p {
+    line-height: 175%;
+}

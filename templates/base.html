@@ -18,7 +18,7 @@
                 <li><a href="{% url 'basic_page:home' %}">Home</a></li>
                 <li><a href="{% url 'basic_page:reception' %}">Reception</a></li>
                 <li><a href="#">Music</a></li>
-                <li><a href="#">Enquiries</a></li>
+                <li><a href="{% url 'contact:form' %}">Enquiries</a></li>
             </ul>
         </nav>
         {% block header-below %}{% endblock %}

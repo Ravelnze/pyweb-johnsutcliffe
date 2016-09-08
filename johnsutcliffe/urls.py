@@ -5,8 +5,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^enquiries/', include('contact_form.urls', namespace='contact')),
     url(r'^', include('basic_page.urls', namespace='basic_page')),
 ]
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
