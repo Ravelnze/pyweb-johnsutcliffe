@@ -1,11 +1,8 @@
 from django import forms
 from models import Enquiry
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Div, Submit, Fieldset, ButtonHolder, HTML
-
-
-class SubmitDefault(Submit):
-    field_classes = 'btn'
+from crispy_forms.layout import Layout, Div, Fieldset, ButtonHolder, HTML, Field
+from crispy_forms.bootstrap import StrictButton
 
 
 class EnquiryForm(forms.ModelForm):
@@ -26,7 +23,7 @@ class EnquiryForm(forms.ModelForm):
             Fieldset(
                 'Send John an enquiry for an obligation free quote:',
                 HTML(
-                    '<label class="control-label">Name:</label>'
+                    '<label class="control-label">Name:</label>',
                 ),
                 Div(
                     'first_name',
@@ -34,14 +31,14 @@ class EnquiryForm(forms.ModelForm):
                     css_class='form-inline'
                 ),
                 'email_contact',
-                'phone_contact',
-                'venue',
-                'wedding_date',
-                'comments'
+                Field('phone_contact', placeholder='0412345678'),
+                Field('venue', placeholder='Venue Name'),
+                Field('wedding_date', placeholder='01/01/2000'),
+                Field('comments', placeholder='Is there anything else you would like to know?')
             ),
             ButtonHolder(
-                Submit('submit', 'Submit', css_class='btn btn-default')
-            )
+                StrictButton('Submit', css_class='btn-default', type='submit')
+            ),
         )
 
     class Meta:
