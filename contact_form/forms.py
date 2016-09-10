@@ -3,9 +3,11 @@ from models import Enquiry
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Fieldset, ButtonHolder, HTML, Field
 from crispy_forms.bootstrap import StrictButton
+from johnsutcliffe.settings import DATE_INPUT_FORMATS
 
 
 class EnquiryForm(forms.ModelForm):
+    wedding_date = forms.DateField(input_formats=DATE_INPUT_FORMATS)
 
     def __init__(self, *args, **kwargs):
         super(EnquiryForm, self).__init__(*args, **kwargs)
@@ -45,8 +47,7 @@ class EnquiryForm(forms.ModelForm):
                 ),
                 Div(
                     Field('venue', placeholder='Venue Name'),
-                    Field('wedding_date', placeholder='Wedding Date'),
-                    # Field('wedding_date', template='datepicker.html'),
+                    Field('wedding_date', placeholder='Wedding Date', readonly="True"),
                     css_class='form-inline'
                 ),
                 HTML(
