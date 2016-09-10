@@ -144,3 +144,7 @@ p {
 .test-border {
     border: 2px red solid;
 }
+
+.control-label {
+    color: #767676;
+}
