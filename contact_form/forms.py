@@ -17,12 +17,11 @@ class EnquiryForm(forms.ModelForm):
         self.helper.form_method = 'POST'
         self.helper.form_show_labels = False
         self.helper.form_class = 'lower-pad'
-        # self.helper.field_template = 'bootstrap/layout/inline_field.html'
         self.helper.layout = Layout(
             Fieldset(
                 'Send John an enquiry for an obligation free quote',
                 HTML(
-                    '<label class="control-label">Name</label>',
+                    '<span class="field-required">* </span><label class="control-label">Name</label>',
                 ),
                 Div(
                     Field('first_name', placeholder='First Name', template='dynamic_text_input.html'),
@@ -30,8 +29,7 @@ class EnquiryForm(forms.ModelForm):
                     css_class='row'
                 ),
                 HTML(
-                    # '<br />'
-                    '<label class="control-label">Contact Details</label>',
+                    '<span class="field-required">* </span><label class="control-label">Contact Details</label>',
                 ),
                 Div(
                     Field('email_contact', placeholder='Email Address', template='dynamic_text_input.html'),
@@ -39,7 +37,6 @@ class EnquiryForm(forms.ModelForm):
                     css_class='row'
                 ),
                 HTML(
-                    # '<br />'
                     '<label class="control-label">Wedding Details</label>',
                 ),
                 Div(
@@ -49,7 +46,6 @@ class EnquiryForm(forms.ModelForm):
                     css_class='row'
                 ),
                 HTML(
-                    # '<br />'
                     '<label class="control-label">Comments/Questions</label>',
                 ),
                 Field('comments', placeholder='Anything else you would like to know?')
