@@ -2,4 +2,5 @@
 
 <div id="div_{{ field.auto_id }}" class="form-group col-xs-6 {% if form_show_errors%}{% if field.errors %} has-error{% endif %}{% endif %}">
     {% crispy_field field %}
+    {% include 'bootstrap3/layout/help_text_and_errors.html' %}
 </div>

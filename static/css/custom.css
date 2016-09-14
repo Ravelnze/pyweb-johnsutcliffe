@@ -152,8 +152,3 @@ p {
 .control-label {
     color: #767676;
 }
-
-.field-required {
-    color: red;
-    font-size: medium;
-}

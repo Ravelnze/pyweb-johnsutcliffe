@@ -21,18 +21,18 @@ class EnquiryForm(forms.ModelForm):
             Fieldset(
                 'Send John an enquiry for an obligation free quote',
                 HTML(
-                    '<span class="field-required">* </span><label class="control-label">Name</label>',
+                    '<label class="control-label">Name</label>',
                 ),
                 Div(
-                    Field('first_name', placeholder='First Name', template='dynamic_text_input.html'),
-                    Field('last_name', placeholder='Last Name', template='dynamic_text_input.html'),
+                    Field('first_name', placeholder='* First Name', template='dynamic_text_input.html'),
+                    Field('last_name', placeholder='* Last Name', template='dynamic_text_input.html'),
                     css_class='row'
                 ),
                 HTML(
-                    '<span class="field-required">* </span><label class="control-label">Contact Details</label>',
+                    '<label class="control-label">Contact Details</label>',
                 ),
                 Div(
-                    Field('email_contact', placeholder='Email Address', template='dynamic_text_input.html'),
+                    Field('email_contact', placeholder='* Email Address', template='dynamic_text_input.html'),
                     Field('phone_contact', placeholder='Phone Number', template='dynamic_text_input.html'),
                     css_class='row'
                 ),
