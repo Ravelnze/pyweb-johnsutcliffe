@@ -156,3 +156,7 @@ p {
 .carousel-pointer {
     cursor:pointer;
 }
+
+.panel {
+    background-color: #fcfcfc;
+}

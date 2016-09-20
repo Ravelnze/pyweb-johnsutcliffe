@@ -1,5 +1,4 @@
 var isPlaying = false;
-var currentAudio = '';
 
 function playPause(audioTag) {
     if (isPlaying) {
@@ -25,24 +24,21 @@ function pauseAudio(audioTag) {
     }
 }
 
-function getAudioTag() {
+function getAudioTagD() {
     var audioData = $('.active > a').data('audio');
     return document.getElementById(audioData);
 }
 
-$('.active').click(function () {
-    console.log(isPlaying);
-    currentAudio = getAudioTag();
-    playPause(currentAudio);
+$('.item > a').click(function () {
+    playPause(getAudioTagD());
 });
 
 $('#audio-carousel').on('slide.bs.carousel', function () {
     console.log('pause before transition');
-    playAudio(getAudioTag());
-    pauseAudio(getAudioTag());
+    pauseAudio(getAudioTagD());
 });
 
 $('#audio-carousel').on('slid.bs.carousel', function () {
     console.log('playing after transition');
-    playAudio(getAudioTag());
+    playAudio(getAudioTagD());
 });

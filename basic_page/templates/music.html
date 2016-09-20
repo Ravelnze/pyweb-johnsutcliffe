@@ -4,41 +4,92 @@
 {% block page_name %}Music Gallery{% endblock %}
 {% block content_after %}
     <!-- Collapse for mobile -->
-    <div class="row visible-xs">
+    <div class="row visible-xs lower-pad">
         <div class="col-xs-offset-1">
             <div class="col-xs-11 ">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="BrazilianHeading">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse"
-                                   data-parent="#accordion" href="#collapseOne" aria-expanded="false"
-                                   aria-controls="collapseOne" data-audio="audio1">
-                                    <span class="glyphicon glyphicon-play"></span> Brazillian Chill
+                                   data-parent="#accordion" href="#Brazilian" aria-expanded="false"
+                                   aria-controls="Brazilian" data-audio="audio1">
+                                    <span class="glyphicon glyphicon-play"></span> Brazilian Chill
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
-                             aria-labelledby="headingOne">
+                        <div id="Brazilian" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="BrazilianHeading">
                             <div class="panel-body">
                                 Brazilian Chill text
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="CubanHeading">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse"
-                                   data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                   aria-controls="collapseTwo" data-audio="audio2">
-                                    <span class="glyphicon glyphicon-play"></span> Long Lounge
+                                   data-parent="#accordion" href="#Cuban" aria-expanded="false"
+                                   aria-controls="Cuban" data-audio="audio2">
+                                    <span class="glyphicon glyphicon-play"></span> Cuban Cha Cha
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                             aria-labelledby="headingTwo">
+                        <div id="Cuban" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="CubanHeading">
                             <div class="panel-body">
-                                Long Lounge text
+                                Cuban Cha Cha text
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="HavanaHeading">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#Havana" aria-expanded="false"
+                                   aria-controls="Havana" data-audio="audio3">
+                                    <span class="glyphicon glyphicon-play"></span> Havana
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="Havana" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="HavanaHeading">
+                            <div class="panel-body">
+                                Havana text
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="LatinHeading">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#Latin" aria-expanded="false"
+                                   aria-controls="Latin" data-audio="audio4">
+                                    <span class="glyphicon glyphicon-play"></span> Latin
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="Latin" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="LatinHeading">
+                            <div class="panel-body">
+                                Latin text
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="LoungeHeading">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#Lounge" aria-expanded="false"
+                                   aria-controls="Lounge" data-audio="audio5">
+                                    <span class="glyphicon glyphicon-play"></span> Lounge
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="Lounge" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="LoungeHeading">
+                            <div class="panel-body">
+                                Lounge text
                             </div>
                         </div>
                     </div>
@@ -55,23 +106,39 @@
                         <ol class="carousel-indicators">
                             <li data-target="#audio-carousel" data-slide-to="0" class="active"></li>
                             <li data-target="#audio-carousel" data-slide-to="1"></li>
+                            <li data-target="#audio-carousel" data-slide-to="2"></li>
+                            <li data-target="#audio-carousel" data-slide-to="3"></li>
+                            <li data-target="#audio-carousel" data-slide-to="4"></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
                                 <a class="carousel-pointer" data-audio="audio1">
-                                    <img class="img-responsive center-block"
-                                         src="http://placehold.it/1300x200"
-                                         alt="Brazilian Chill"
-                                    >
-                                    <span class="carousel-caption">stuff</span>
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <span class="carousel-caption">Brazilian Chill</span>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="carousel-pointer" data-audio="audio2">
-                                    <img class="img-responsive center-block"
-                                         src="http://placehold.it/1300x200"
-                                         alt="Lounge"
-                                    >
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <span class="carousel-caption">Cuban Cha Cha</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="carousel-pointer" data-audio="audio3">
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <span class="carousel-caption">Havana</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="carousel-pointer" data-audio="audio4">
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <span class="carousel-caption">Latin</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="carousel-pointer" data-audio="audio5">
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <span class="carousel-caption">Lounge</span>
                                 </a>
                             </div>
                         </div>
@@ -91,7 +158,10 @@
 {% endblock %}
 {% block extra_js %}
     <audio id="audio1" src="{% static 'audio/Brazilian_Chill.mp3' %}" preload="auto"></audio>
-    <audio id="audio2" src="{% static 'audio/Long_Lounge.mp3' %}" preload="auto"></audio>
-    {% comment %}<script type="text/javascript" src="{% static 'js/init_doc.js' %}"></script>{% endcomment %}
-    <script type="text/javascript" src="{% static 'js/music-player.js' %}"></script>
+    <audio id="audio2" src="{% static 'audio/Cuban cha cha.mp3' %}" preload="auto"></audio>
+    <audio id="audio3" src="{% static 'audio/Havana.mp3' %}" preload="auto"></audio>
+    <audio id="audio4" src="{% static 'audio/Latin.mp3' %}" preload="auto"></audio>
+    <audio id="audio5" src="{% static 'audio/Long_Lounge.mp3' %}" preload="auto"></audio>
+    <script type="text/javascript" src="{% static 'js/desktop-music-player.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/mobile-music-player.js' %}"></script>
 {% endblock %}
