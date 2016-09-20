@@ -127,3 +127,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# Email settings
+
+EMAIL_HOST = 'mail.johnsutcliffe.com.au'
+
+EMAIL_PORT = '25'
+
+# EMAIL_USE_TLS = True
+

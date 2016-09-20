@@ -1,10 +1,13 @@
 from django.shortcuts import render
 
 
-def load_home(request):
+def home(request):
     return render(request, 'home.html')
 
 
-def load_reception(request):
+def reception(request):
     return render(request, 'reception.html')
 
+
+def music(request):
+    return render(request, 'music.html')

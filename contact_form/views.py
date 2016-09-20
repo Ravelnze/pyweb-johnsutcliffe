@@ -9,9 +9,9 @@ def load_form(request):
         form = EnquiryForm(request.POST)
         if form.is_valid():
             # send_mail('New Enquiry',
-            #           form,
-            #           'ravelnze@icloud.com',
-            #           ['ravelnze@icloud.com']
+            #           form.cleaned_data['first_name'],
+            #           'info@johnsutcliffe.com.au',
+            #           ['mpnaghxw@grr.la']
             #           )
             form.save()
             return redirect(reverse('contact:complete'))

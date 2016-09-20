@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %} - John Sutcliffe</title>
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-theme.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/custom.css' %}">
@@ -15,16 +16,16 @@
             <H1><a class="tangerine-header" href="{% url 'basic_page:home' %}">John Sutcliffe</a></H1>
             <H4 class="tagline-colour">Wedding DJ & Guitarist</H4>
         </div>
-        <nav>
-            <ul class="nav nav-justified">
-                <li><a href="{% url 'basic_page:home' %}">Home</a></li>
-                <li><a href="{% url 'basic_page:reception' %}">Reception</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="{% url 'contact:form' %}">Enquiries</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="nav nav-justified">
+                    <li><a href="{% url 'basic_page:home' %}">Home</a></li>
+                    <li><a href="{% url 'basic_page:reception' %}">Reception</a></li>
+                    <li><a href="{% url 'basic_page:music' %}">Music</a></li>
+                    <li><a href="{% url 'contact:form' %}">Enquiries</a></li>
+                </ul>
+            </nav>
         {% block header-below %}{% endblock %}
-        <div class="container-fluid bg-img">
+        <div class="container-fluid">
             {% block content_before %}{% endblock %}
             <div class="row">
                 <div class="col-sm-offset-1">
@@ -34,7 +35,6 @@
                         </blockquote>
                     </div>
                 </div>
-                <div class="col-sm-offset-2"></div>
             </div>
             {% block content_after %}{% endblock %}
         </div>
