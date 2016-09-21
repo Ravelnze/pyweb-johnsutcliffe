@@ -14,11 +14,12 @@
     background-color: #fff3e5;
     margin-top: 0;
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .page-header H1 {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .page-header H1 a {
@@ -33,6 +34,7 @@
     text-align: center;
     color: #adadad;
     font-size: 2.2rem;
+    margin: 0;
 }
 
 .nav-justified {
@@ -78,29 +80,24 @@ html {
 }
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 140px;
+    margin-bottom: 130px;
     background-color: #f8f8f8;
-
-    /* testing background image stuff */
-    /*background: black url('../img/Reception.jpg') no-repeat center;
-    /*background-repeat: no-repeat;
-    background-size: 80%;*/
 }
 
 .footer {
     position: absolute;
-    padding-top: 25px;
+    padding-top: 20px;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 140px;
+    height: 130px;
     color: #767676;
     background-color: black;
 }
 
 .footer p {
     font-size: 1.1rem;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-align: center;
 }
 
@@ -158,5 +155,22 @@ p {
 }
 
 .panel {
-    background-color: #fcfcfc;
+    background-color: #fff3e5;
+    border: none;
+}
+
+.panel-body {
+    background: url('http://placehold.it/300x50') no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.panel-title > a {
+    text-decoration: none;
+}
+
+h4.panel-title {
+    width: 100%;
 }

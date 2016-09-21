@@ -2,26 +2,26 @@ var isPlaying = false;
 
 function playPause(audioTag) {
     if (isPlaying) {
-        console.log('toggle-pause');
-        pauseAudio(audioTag)
+        pauseAudioD(audioTag);
     } else {
-        console.log('toggle-play');
-        playAudio(audioTag)
+        playAudioD(audioTag);
     }
 }
 
-function playAudio(audioTag) {
+function playAudioD(audioTag) {
     audioTag.play();
     audioTag.onplaying = function () {
         isPlaying = true;
-    }
+    };
+    audioTag.addEventListener("ended", nextSlide);
 }
 
-function pauseAudio(audioTag) {
+function pauseAudioD(audioTag) {
     audioTag.pause();
     audioTag.onpause = function () {
         isPlaying = false;
-    }
+    };
+    audioTag.removeEventListener("ended", nextSlide);
 }
 
 function getAudioTagD() {
@@ -29,16 +29,18 @@ function getAudioTagD() {
     return document.getElementById(audioData);
 }
 
+function nextSlide() {
+    $('.carousel').carousel('next');
+}
+
 $('.item > a').click(function () {
     playPause(getAudioTagD());
 });
 
 $('#audio-carousel').on('slide.bs.carousel', function () {
-    console.log('pause before transition');
-    pauseAudio(getAudioTagD());
+    pauseAudioD(getAudioTagD());
 });
 
 $('#audio-carousel').on('slid.bs.carousel', function () {
-    console.log('playing after transition');
-    playAudio(getAudioTagD());
+    playAudioD(getAudioTagD());
 });

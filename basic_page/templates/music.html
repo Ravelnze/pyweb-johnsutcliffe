@@ -7,6 +7,9 @@
     <div class="row visible-xs lower-pad">
         <div class="col-xs-offset-1">
             <div class="col-xs-11 ">
+                <p class="lead">
+                    Tap below to hear samples of John's music
+                </p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel">
                         <div class="panel-heading" role="tab" id="BrazilianHeading">
@@ -48,7 +51,7 @@
                                 <a class="collapsed" role="button" data-toggle="collapse"
                                    data-parent="#accordion" href="#Havana" aria-expanded="false"
                                    aria-controls="Havana" data-audio="audio3">
-                                    <span class="glyphicon glyphicon-play"></span> Havana
+                                    <span class="glyphicon glyphicon-play"></span> Lively Havana
                                 </a>
                             </h4>
                         </div>
@@ -65,7 +68,7 @@
                                 <a class="collapsed" role="button" data-toggle="collapse"
                                    data-parent="#accordion" href="#Latin" aria-expanded="false"
                                    aria-controls="Latin" data-audio="audio4">
-                                    <span class="glyphicon glyphicon-play"></span> Latin
+                                    <span class="glyphicon glyphicon-play"></span> Latin Jam
                                 </a>
                             </h4>
                         </div>
@@ -82,7 +85,7 @@
                                 <a class="collapsed" role="button" data-toggle="collapse"
                                    data-parent="#accordion" href="#Lounge" aria-expanded="false"
                                    aria-controls="Lounge" data-audio="audio5">
-                                    <span class="glyphicon glyphicon-play"></span> Lounge
+                                    <span class="glyphicon glyphicon-play"></span> Smooth Lounge
                                 </a>
                             </h4>
                         </div>
@@ -98,47 +101,60 @@
         </div>
     </div>
     <!-- Carousel for desktop -->
-    <div class="row hidden-xs">
+    <div class="row hidden-xs lower-pad">
         <div class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
             <div class="col-sm-10 col-md-10 col-lg-10">
+                <p class="lead">
+                    Click below to hear samples of John's music
+                </p>
                 <div data-role="page">
                     <div id="audio-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
                         <ol class="carousel-indicators">
-                            <li data-target="#audio-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#audio-carousel" data-slide-to="1"></li>
-                            <li data-target="#audio-carousel" data-slide-to="2"></li>
-                            <li data-target="#audio-carousel" data-slide-to="3"></li>
-                            <li data-target="#audio-carousel" data-slide-to="4"></li>
+                            <li data-target="#audio-carousel" data-slide-to="0"
+                                class="active" data-toggle="tooltip" data-placement="bottom" title="Brazilian Chill"
+                            ></li>
+                            <li data-target="#audio-carousel" data-slide-to="1"
+                                data-toggle="tooltip" data-placement="bottom" title="Cuban Cha Cha"
+                            ></li>
+                            <li data-target="#audio-carousel" data-slide-to="2"
+                                data-toggle="tooltip" data-placement="bottom" title="Lively Havana"
+                            ></li>
+                            <li data-target="#audio-carousel" data-slide-to="3"
+                                data-toggle="tooltip" data-placement="bottom" title="Latin Jam"
+                            ></li>
+                            <li data-target="#audio-carousel" data-slide-to="4"
+                                data-toggle="tooltip" data-placement="bottom" title="Smooth Lounge"
+                            ></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
                                 <a class="carousel-pointer" data-audio="audio1">
-                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x400">
                                     <span class="carousel-caption">Brazilian Chill</span>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="carousel-pointer" data-audio="audio2">
-                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x400">
                                     <span class="carousel-caption">Cuban Cha Cha</span>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="carousel-pointer" data-audio="audio3">
-                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
-                                    <span class="carousel-caption">Havana</span>
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x400">
+                                    <span class="carousel-caption">Lively Havana</span>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="carousel-pointer" data-audio="audio4">
-                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
-                                    <span class="carousel-caption">Latin</span>
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x400">
+                                    <span class="carousel-caption">Latin Jam</span>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="carousel-pointer" data-audio="audio5">
-                                    <img class="img-responsive center-block" src="http://placehold.it/1300x200">
-                                    <span class="carousel-caption">Lounge</span>
+                                    <img class="img-responsive center-block" src="http://placehold.it/1300x400">
+                                    <span class="carousel-caption">Smooth Lounge</span>
                                 </a>
                             </div>
                         </div>
@@ -157,11 +173,22 @@
     </div>
 {% endblock %}
 {% block extra_js %}
-    <audio id="audio1" src="{% static 'audio/Brazilian_Chill.mp3' %}" preload="auto"></audio>
-    <audio id="audio2" src="{% static 'audio/Cuban cha cha.mp3' %}" preload="auto"></audio>
-    <audio id="audio3" src="{% static 'audio/Havana.mp3' %}" preload="auto"></audio>
-    <audio id="audio4" src="{% static 'audio/Latin.mp3' %}" preload="auto"></audio>
-    <audio id="audio5" src="{% static 'audio/Long_Lounge.mp3' %}" preload="auto"></audio>
+    <audio id="audio1" preload="auto">
+        <source src="{% static 'audio/1-brazillian-chill.mp3' %}" type="audio/mp3">
+    </audio>
+    <audio id="audio2" preload="auto">
+        <source src="{% static 'audio/Cuban-cha-cha.mp3' %}" type="audio/mp3">
+    </audio>
+    <audio id="audio3" preload="auto">
+        <source src="{% static 'audio/4-lively-havana.mp3' %}" type="audio/mp3">
+    </audio>
+    <audio id="audio4" preload="auto">
+        <source src="{% static 'audio/3-latin-jam.mp3' %}" type="audio/mp3">
+    </audio>
+    <audio id="audio5" preload="auto">
+        <source src="{% static 'audio/5smooth-lounge.mp3' %}" type="audio/mp3">
+    </audio>
+    <script type="text/javascript" src="{% static 'js/init_doc.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/desktop-music-player.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/mobile-music-player.js' %}"></script>
 {% endblock %}

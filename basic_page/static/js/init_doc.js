@@ -1,5 +1,3 @@
-$(document).ready(function() {
-    $('.carousel').carousel({
-        interval: false
-    });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
 });

@@ -1,18 +1,12 @@
 from django.shortcuts import render, redirect
 from forms import EnquiryForm
 from django.core.urlresolvers import reverse
-# from django.core.mail import send_mail
 
 
 def load_form(request):
     if request.method == 'POST':
         form = EnquiryForm(request.POST)
         if form.is_valid():
-            # send_mail('New Enquiry',
-            #           form.cleaned_data['first_name'],
-            #           'info@johnsutcliffe.com.au',
-            #           ['mpnaghxw@grr.la']
-            #           )
             form.save()
             return redirect(reverse('contact:complete'))
     else:
