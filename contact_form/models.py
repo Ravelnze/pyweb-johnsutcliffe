@@ -11,3 +11,7 @@ class Enquiry(models.Model):
     venue = models.CharField(max_length=30, blank=True)
     wedding_date = models.DateField(null=True, blank=True)
     comments = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = 'Enquiry'
+        verbose_name_plural = 'Enquiries'
