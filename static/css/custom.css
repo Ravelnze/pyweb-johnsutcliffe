@@ -32,9 +32,17 @@
 
 .page-header H4 {
     text-align: center;
+}
+
+.page-header H4 a {
     color: #adadad;
     font-size: 2.2rem;
     margin: 0;
+    text-decoration: none;
+}
+
+.page-header H4 a:hover {
+    color: #d7d7d7;
 }
 
 .nav-justified {
@@ -173,4 +181,8 @@ p {
 
 h4.panel-title {
     width: 100%;
+}
+
+.input-required {
+    border-left: 6px solid #f5ece2;
 }

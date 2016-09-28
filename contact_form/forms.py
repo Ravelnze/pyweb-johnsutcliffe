@@ -24,24 +24,27 @@ class EnquiryForm(forms.ModelForm):
                     '<label class="control-label">Name</label>',
                 ),
                 Div(
-                    Field('first_name', placeholder='* First Name', template='dynamic_text_input.html'),
-                    Field('last_name', placeholder='* Last Name', template='dynamic_text_input.html'),
+                    Field('first_name', placeholder='First Name', template='dynamic_text_input.html',
+                          css_class='input-required'),
+                    Field('last_name', placeholder='Last Name', template='dynamic_text_input.html',
+                          css_class='input-required'),
                     css_class='row'
                 ),
                 HTML(
                     '<label class="control-label">Contact Details</label>',
                 ),
                 Div(
-                    Field('email_contact', placeholder='* Email Address', template='dynamic_text_input.html'),
-                    Field('phone_contact', placeholder='Phone Number', template='dynamic_text_input.html'),
+                    Field('email_contact', placeholder='Email Address', template='dynamic_text_input.html',
+                          css_class='input-required'),
+                    Field('phone_contact', placeholder=' Phone Number', template='dynamic_text_input.html'),
                     css_class='row'
                 ),
                 HTML(
                     '<label class="control-label">Wedding Details</label>',
                 ),
                 Div(
-                    Field('venue', placeholder='Venue Name', template='dynamic_text_input.html'),
-                    Field('wedding_date', placeholder='Wedding Date', readonly="True",
+                    Field('venue', placeholder=' Venue Name', template='dynamic_text_input.html'),
+                    Field('wedding_date', placeholder=' Wedding Date', readonly="True",
                           template='dynamic_text_input.html'),
                     css_class='row'
                 ),
