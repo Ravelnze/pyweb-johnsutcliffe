@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="e328ccab-7413-41e9-8eb3-cb7463c67216" name="johnsutcliffe" url="http://52.62.178.91/">
-        <fileTransfer host="52.62.178.91" port="22" rootFolder="/home/asutcliffe/pyweb/johnsutcliffe/" accessType="SFTP" password="dfc4dfcfdfdcdfcbdff8dfcedfdcdf9ddf93" username="asutcliffe">
+        <fileTransfer host="52.62.178.91" port="22" rootFolder="/home/asutcliffe/pyweb/johnsutcliffe" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

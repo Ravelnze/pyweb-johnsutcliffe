@@ -168,7 +168,7 @@ p {
 }
 
 .panel-body {
-    background: url('http://placehold.it/300x50') no-repeat center;
+    padding: 0;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
