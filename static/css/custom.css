@@ -186,3 +186,11 @@ h4.panel-title {
 .input-required {
     border-left: 5px solid #fbe3c6;
 }
+
+::selection {
+  background: #fff3e5; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #fff3e5; /* Gecko Browsers */
+}
